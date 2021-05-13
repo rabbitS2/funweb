@@ -6,25 +6,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
 <script type="text/javascript">
-	function idFix(){
-		// 아이디 사용하기 버튼 클릭시 실행 
-		// 1) 창닫기   2) 선택한 아이디 정보전달(회원가입페이지)
-		
-		// 중복확인창 -> 회원가입창으로 정보 전달
-		
-		opener.document.fr.id.value = document.ofr.userid.value;
-		
-		
-		// 창닫기
-		window.close();
-		
-		
-	}
+   function idFix(){
+	   //  아이디 사용하기 버튼 클릭시 실행
+	   // 1) 중복확인창 닫기  2)선택한 아이디 정보 전달(회원가입페이지)  
+	   
+	   // 중복확인창 -> 회원가입창으로 정보 전달
+	   
+	   opener.document.fr.id.value = document.ofr.userid.value;
+	   
+	   // 창 닫기
+	   window.close();
+   }
+
 </script>
-
-
 
 
 </head>
@@ -47,12 +42,9 @@
 		  out.print("이미 사용중인 아이디입니다.");
 	  }else{//result ==0
 		  out.print("사용가능한 아이디입니다.");
-	  	%>
-	  	
-	  		<input type="button" value="아이디 사용하기!" onclick="idFix()">
-	  	<%
-	  
-	  
+	      %>
+	      <input type="button" value="아이디 사용하기!" onclick="idFix()">
+	      <%
 	  }
 	%>
 	<hr>
