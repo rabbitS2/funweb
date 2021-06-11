@@ -31,7 +31,7 @@
 	  // DB로 이동후 회원인지 아닌지 판단
 	  
 	  // 전달되는 파라미터 저장(userid)
-	  String id = request.getParameter("userid");
+	  String id = request.getParameter("user_mail");
 	  
 	  // DB 객체 생성 -> 체크 메서드 
 	  MemberDAO mdao = new MemberDAO();
